@@ -1,5 +1,5 @@
 $("button").click(function(){
-    $.get("http://elated-pathway-194105.appspot.com/", function(){
+    $.get("https://elated-pathway-194105.appspot.com/", function(data, status){
         alert("success");
     });
 })
