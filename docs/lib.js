@@ -1,4 +1,4 @@
-const url = "";
+const postUrl = "http://elated-pathway-194105.appspot.com/";
 
 var request = {
     url: '',
