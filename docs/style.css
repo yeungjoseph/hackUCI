@@ -20,7 +20,7 @@ body {
 
 
 header {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     position: relative;
     z-index: 100;
     box-shadow: 0px 0px 3px #808080;
@@ -34,7 +34,7 @@ nav {
     line-height: 3.5rem;
     vertical-align: middle;
     font-size: 1.3rem;
-    /* color: ; */
+    color: #212121;
 }
 
 nav span {
@@ -50,7 +50,8 @@ main {
 }
 
 .img-container {
-    position: relative;
+    /* background-color: #1A9AD9; */
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
@@ -62,6 +63,7 @@ main {
 .img-camera {
     display: block;
     position: absolute;
+    cursor: pointer;
 
     width: 30vmin;
 
@@ -74,4 +76,7 @@ main {
     padding: 30px;
 }
 
-form {display: none;}
+
+.hide {
+    display: none;
+}

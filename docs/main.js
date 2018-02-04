@@ -1,6 +1,4 @@
 
-
-// this needs to be at the end
 $(".img-camera").click(function() {
     $("#file-select").click();
 
