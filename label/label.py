@@ -29,12 +29,13 @@ Run the script on an image to get a label, E.g.:
 # [START import_libraries]
 import argparse
 import base64
-
+import numpy as np
 import googleapiclient.discovery
+
 # [END import_libraries]
 
 
-def main(photo_file):
+def annotate(photo_file):
     """Run a label request on a single image"""
 
     # [START authenticate]
@@ -59,7 +60,14 @@ def main(photo_file):
         # [START parse_response]
         response = service_request.execute()
         #label = response['responses'][0]['webDetection']#[0]['description']
-        print(response.type)
+
+        print("response")
+        print(response)
+        print("\n")
+        print("response['responses']\n")
+        print(response['responses'][0]['labelAnnotations'])
+        print("\n")
+        return ('tomato')
 
         # for i=0:9
         #     label = response['responses'][0]['labelAnnotations'][i]['description']
@@ -72,5 +80,5 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('image_file', help='The image you\'d like to label.')
     args = parser.parse_args()
-    main(args.image_file)
+    annotate(args.image_file)
 # [END run_application]
